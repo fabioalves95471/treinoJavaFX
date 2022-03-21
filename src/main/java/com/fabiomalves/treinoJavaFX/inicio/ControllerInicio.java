@@ -1,6 +1,7 @@
 package com.fabiomalves.treinoJavaFX.inicio;
 
 import com.fabiomalves.treinoJavaFX.aplicativosCriados.flutuante.Flutuante;
+import com.fabiomalves.treinoJavaFX.aplicativosCriados.testeStage.TesteStage;
 import javafx.css.PseudoClass;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -13,7 +14,9 @@ public class ControllerInicio {
     Stage stageAplications;
     @FXML
     Button bFlutuante;
-    
+    @FXML
+    Button bTesteStage;    
+
     public void setStageAplications (Stage stageAplications) {
         this.stageAplications = stageAplications;
     }
@@ -24,6 +27,24 @@ public class ControllerInicio {
     }
     @FXML
     private void bFlutuanteEventKey (KeyEvent ke) {
+        if (ke.getCode().equals(KeyCode.ENTER)) {
+            if(ke.getEventType().equals(KeyEvent.KEY_PRESSED))
+                bFlutuante.pseudoClassStateChanged(PseudoClass.getPseudoClass("armed"), true);
+            if(ke.getEventType().equals(KeyEvent.KEY_RELEASED)){
+                bFlutuante.pseudoClassStateChanged(PseudoClass.getPseudoClass("armed"), false);
+                bFlutuanteEventAction();
+            }
+        }
+        if (ke.getCode().equals(KeyCode.SPACE) && ke.getEventType().equals(KeyEvent.KEY_RELEASED)) {
+            bFlutuanteEventAction();
+        }
+    }
+    @FXML
+    private void bTesteStageEventAction () {
+        new TesteStage().start(stageAplications);
+    }
+    @FXML
+    private void bTesteStageEventKey (KeyEvent ke) {
         if (ke.getCode().equals(KeyCode.ENTER)) {
             if(ke.getEventType().equals(KeyEvent.KEY_PRESSED))
                 bFlutuante.pseudoClassStateChanged(PseudoClass.getPseudoClass("armed"), true);

@@ -66,6 +66,7 @@
               </rowConstraints>
                <children>
                   <Button fx:id="bFlutuante" minWidth="120.0" mnemonicParsing="false" onKeyPressed="#bFlutuanteEventKey" onKeyReleased="#bFlutuanteEventKey" onMouseReleased="#bFlutuanteEventAction" text="Flutuante" />
+                  <Button fx:id="bTesteStage" minWidth="120.0" mnemonicParsing="false" onKeyPressed="#bTesteStageEventKey" onKeyReleased="#bTesteStageEventKey" onMouseReleased="#bTesteStageEventAction" text="TesteStage" GridPane.columnIndex="1" />
                </children>
             </GridPane>
             <Label text="Códigos pegos na web" />

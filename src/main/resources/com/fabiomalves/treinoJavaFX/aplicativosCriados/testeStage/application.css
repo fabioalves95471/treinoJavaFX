@@ -1,0 +1,13 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.retangulo {
+	-fx-fill: #79f;
+	-fx-stroke: #055;
+	-fx-stroke-width: 5px;
+	-fx-rotate: 1.5;
+}
+.retangulo2 {
+	-fx-fill: #7ff;
+	-fx-stroke: #059;
+	-fx-stroke-width: 5px;
+	-fx-rotate: 0;
+}
