@@ -65,8 +65,9 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
+                  <Button fx:id="bRegex" mnemonicParsing="false" onKeyPressed="#bRegexEventKey" onKeyReleased="#bRegexEventKey" onMouseReleased="#bRegexEventAction" text="Regex" GridPane.columnIndex="1" />
                   <Button fx:id="bFlutuante" minWidth="120.0" mnemonicParsing="false" onKeyPressed="#bFlutuanteEventKey" onKeyReleased="#bFlutuanteEventKey" onMouseReleased="#bFlutuanteEventAction" text="Flutuante" />
-                  <Button fx:id="bTesteStage" minWidth="120.0" mnemonicParsing="false" onKeyPressed="#bTesteStageEventKey" onKeyReleased="#bTesteStageEventKey" onMouseReleased="#bTesteStageEventAction" text="TesteStage" GridPane.columnIndex="1" />
+                  <Button fx:id="bTesteStage" minWidth="120.0" mnemonicParsing="false" onKeyPressed="#bTesteStageEventKey" onKeyReleased="#bTesteStageEventKey" onMouseReleased="#bTesteStageEventAction" text="TesteStage" GridPane.columnIndex="2" />
                </children>
             </GridPane>
             <Label text="Códigos pegos na web" />

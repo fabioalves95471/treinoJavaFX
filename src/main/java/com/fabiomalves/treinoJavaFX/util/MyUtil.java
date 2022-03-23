@@ -5,15 +5,15 @@ import javafx.scene.Parent;
 import java.io.IOException;
 import java.net.URL;
 
-import com.fabiomalves.treinoJavaFX.FxmlCriado;
+import com.fabiomalves.treinoJavaFX.Views;
 
 public class MyUtil {
 
     private static String pathTreinoJavaFX = "/com/fabiomalves/treinoJavaFX/";
 
-    public static FXMLLoader FXML_loader (FxmlCriado fxmlCriado) {
-        URL url = FxmlCriado.class.getResource(pathTreinoJavaFX+fxmlCriado.getPathFxml());
-        return new FXMLLoader(FxmlCriado.class.getResource(pathTreinoJavaFX+fxmlCriado.getPathFxml()));
+    public static FXMLLoader FXML_loader (Views views) {
+        URL url = Views.class.getResource(pathTreinoJavaFX+ views.getPathFxml());
+        return new FXMLLoader(Views.class.getResource(pathTreinoJavaFX+ views.getPathFxml()));
     }
 
     public static Parent FXML_load (FXMLLoader loader) {
@@ -28,9 +28,9 @@ public class MyUtil {
 
     }
 
-    public static Parent FXML_load (FxmlCriado fxmlCriado) {
+    public static Parent FXML_load (Views views) {
         try {
-            FXMLLoader loader = new FXMLLoader(FxmlCriado.class.getResource(pathTreinoJavaFX+fxmlCriado.getPathFxml()));
+            FXMLLoader loader = new FXMLLoader(Views.class.getResource(pathTreinoJavaFX+ views.getPathFxml()));
             return loader.load();
         } catch (IOException e) {
             e.printStackTrace();
